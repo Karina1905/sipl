@@ -1,0 +1,10 @@
+// S = 1 + 2 + ... + N
+begin
+  S := 0;
+  K := 0;
+  while N > K do
+  begin
+    K := K + 1;
+    S := S + K
+  end
+end

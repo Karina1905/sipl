@@ -1,0 +1,7 @@
+// M = max(A, B, C): вкладене розгалуження
+begin
+  if A > B then
+    if A > C then M := A else M := C
+  else
+    if B > C then M := B else M := C
+end

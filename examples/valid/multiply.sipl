@@ -1,0 +1,9 @@
+// P = A * B через додавання (B >= 0)
+begin
+  P := 0;
+  while B > 0 do
+  begin
+    P := P + A;
+    B := B - 1
+  end
+end

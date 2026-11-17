@@ -1,0 +1,72 @@
+program: BEGIN seq END
+
+seq: stmt
+   | seq SEMI stmt
+
+stmt: assign
+    | if_stmt
+    | while_stmt
+    | block
+    | skip_stmt
+
+assign: NAME ASSIGN aexp
+if_stmt: IF bexp THEN seq ELSE stmt
+while_stmt: WHILE bexp DO stmt
+block: BEGIN seq END
+skip_stmt: SKIP
+
+aexp: term
+    | aexp PLUS term
+    | aexp MINUS term
+
+term: factor
+    | term STAR factor
+
+factor: num
+      | NAME
+      | LPAR aexp RPAR
+
+num: NUMBER
+   | MINUS NUMBER
+
+bexp: bterm
+    | bexp OR bterm
+
+bterm: NOT bterm
+     | bfactor
+
+bfactor: aexp EQ aexp
+       | aexp GT aexp
+       | LPAR bexp RPAR
+
+BEGIN: "begin"
+END: "end"
+IF: "if"
+THEN: "then"
+ELSE: "else"
+WHILE: "while"
+DO: "do"
+SKIP: "skip"
+OR.2: /or\b|∨/
+NOT.2: /not\b|¬/
+
+ASSIGN: ":="
+SEMI: ";"
+LPAR: "("
+RPAR: ")"
+PLUS: "+"
+MINUS: "-"
+STAR: "*"
+EQ: "="
+GT: ">"
+
+NAME: /[A-Za-z][A-Za-z0-9_]*/
+NUMBER: /[0-9]+/
+
+LINE_COMMENT: /\/\/[^\n]*/
+BLOCK_COMMENT: /\/\*(.|\n)*?\*\//
+
+%import common.WS
+%ignore WS
+%ignore LINE_COMMENT
+%ignore BLOCK_COMMENT
