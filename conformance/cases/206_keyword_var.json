@@ -1,0 +1,10 @@
+{
+  "description": "Ключове слово як змінна",
+  "expect": {
+    "status": "syntax_error",
+    "error": {
+      "line": 2,
+      "column": 9
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "description": "'=' замість ':='",
+  "expect": {
+    "status": "syntax_error",
+    "error": {
+      "line": 2,
+      "column": 5
+    }
+  }
+}

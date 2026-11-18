@@ -1,0 +1,4 @@
+begin
+  X := 1;
+  while N > 0 do N := N - 1
+end

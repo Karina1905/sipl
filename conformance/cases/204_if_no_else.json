@@ -1,0 +1,10 @@
+{
+  "description": "if без else",
+  "expect": {
+    "status": "syntax_error",
+    "error": {
+      "line": 3,
+      "column": 1
+    }
+  }
+}

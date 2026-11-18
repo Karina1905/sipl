@@ -1,0 +1,1 @@
+begin begin begin X := 1 end end; begin begin Y := X end end end

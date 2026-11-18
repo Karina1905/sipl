@@ -1,0 +1,12 @@
+{
+  "description": "Читання невизначеної змінної",
+  "expect": {
+    "status": "runtime_error",
+    "error": {
+      "line": 2,
+      "column": 8,
+      "message_contains": "undefined"
+    },
+    "state": {}
+  }
+}

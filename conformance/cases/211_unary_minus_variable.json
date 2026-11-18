@@ -1,0 +1,10 @@
+{
+  "description": "Мінус лише в числових літералах",
+  "expect": {
+    "status": "syntax_error",
+    "error": {
+      "line": 2,
+      "column": 9
+    }
+  }
+}

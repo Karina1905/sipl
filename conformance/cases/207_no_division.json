@@ -1,0 +1,10 @@
+{
+  "description": "Ділення не входить до SIPL",
+  "expect": {
+    "status": "syntax_error",
+    "error": {
+      "line": 2,
+      "column": 10
+    }
+  }
+}

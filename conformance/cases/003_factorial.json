@@ -1,0 +1,14 @@
+{
+  "description": "Факторіал 6",
+  "input": {
+    "N": 6
+  },
+  "expect": {
+    "status": "ok",
+    "state": {
+      "N": 6,
+      "F": 720,
+      "I": 7
+    }
+  }
+}

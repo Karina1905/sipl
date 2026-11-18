@@ -1,0 +1,230 @@
+{
+  "type": "Program",
+  "id": 0,
+  "body": {
+    "type": "While",
+    "id": 1,
+    "cond": {
+      "type": "Not",
+      "id": 2,
+      "operand": {
+        "type": "Compare",
+        "id": 3,
+        "op": "=",
+        "left": {
+          "type": "Var",
+          "id": 4,
+          "name": "A",
+          "span": {
+            "line": 3,
+            "column": 14,
+            "end_line": 3,
+            "end_column": 15,
+            "start": 98,
+            "end": 99
+          }
+        },
+        "right": {
+          "type": "Var",
+          "id": 5,
+          "name": "B",
+          "span": {
+            "line": 3,
+            "column": 18,
+            "end_line": 3,
+            "end_column": 19,
+            "start": 102,
+            "end": 103
+          }
+        },
+        "span": {
+          "line": 3,
+          "column": 13,
+          "end_line": 3,
+          "end_column": 20,
+          "start": 97,
+          "end": 104
+        }
+      },
+      "span": {
+        "line": 3,
+        "column": 9,
+        "end_line": 3,
+        "end_column": 20,
+        "start": 93,
+        "end": 104
+      }
+    },
+    "body": {
+      "type": "If",
+      "id": 6,
+      "cond": {
+        "type": "Compare",
+        "id": 7,
+        "op": ">",
+        "left": {
+          "type": "Var",
+          "id": 8,
+          "name": "A",
+          "span": {
+            "line": 4,
+            "column": 8,
+            "end_line": 4,
+            "end_column": 9,
+            "start": 115,
+            "end": 116
+          }
+        },
+        "right": {
+          "type": "Var",
+          "id": 9,
+          "name": "B",
+          "span": {
+            "line": 4,
+            "column": 12,
+            "end_line": 4,
+            "end_column": 13,
+            "start": 119,
+            "end": 120
+          }
+        },
+        "span": {
+          "line": 4,
+          "column": 8,
+          "end_line": 4,
+          "end_column": 13,
+          "start": 115,
+          "end": 120
+        }
+      },
+      "then_branch": {
+        "type": "Assign",
+        "id": 10,
+        "target": "A",
+        "expr": {
+          "type": "BinOp",
+          "id": 11,
+          "op": "-",
+          "left": {
+            "type": "Var",
+            "id": 12,
+            "name": "A",
+            "span": {
+              "line": 4,
+              "column": 24,
+              "end_line": 4,
+              "end_column": 25,
+              "start": 131,
+              "end": 132
+            }
+          },
+          "right": {
+            "type": "Var",
+            "id": 13,
+            "name": "B",
+            "span": {
+              "line": 4,
+              "column": 28,
+              "end_line": 4,
+              "end_column": 29,
+              "start": 135,
+              "end": 136
+            }
+          },
+          "span": {
+            "line": 4,
+            "column": 24,
+            "end_line": 4,
+            "end_column": 29,
+            "start": 131,
+            "end": 136
+          }
+        },
+        "span": {
+          "line": 4,
+          "column": 19,
+          "end_line": 4,
+          "end_column": 29,
+          "start": 126,
+          "end": 136
+        }
+      },
+      "else_branch": {
+        "type": "Assign",
+        "id": 14,
+        "target": "B",
+        "expr": {
+          "type": "BinOp",
+          "id": 15,
+          "op": "-",
+          "left": {
+            "type": "Var",
+            "id": 16,
+            "name": "B",
+            "span": {
+              "line": 4,
+              "column": 40,
+              "end_line": 4,
+              "end_column": 41,
+              "start": 147,
+              "end": 148
+            }
+          },
+          "right": {
+            "type": "Var",
+            "id": 17,
+            "name": "A",
+            "span": {
+              "line": 4,
+              "column": 44,
+              "end_line": 4,
+              "end_column": 45,
+              "start": 151,
+              "end": 152
+            }
+          },
+          "span": {
+            "line": 4,
+            "column": 40,
+            "end_line": 4,
+            "end_column": 45,
+            "start": 147,
+            "end": 152
+          }
+        },
+        "span": {
+          "line": 4,
+          "column": 35,
+          "end_line": 4,
+          "end_column": 45,
+          "start": 142,
+          "end": 152
+        }
+      },
+      "span": {
+        "line": 4,
+        "column": 5,
+        "end_line": 4,
+        "end_column": 45,
+        "start": 112,
+        "end": 152
+      }
+    },
+    "span": {
+      "line": 3,
+      "column": 3,
+      "end_line": 4,
+      "end_column": 45,
+      "start": 87,
+      "end": 152
+    }
+  },
+  "span": {
+    "line": 2,
+    "column": 1,
+    "end_line": 5,
+    "end_column": 4,
+    "start": 79,
+    "end": 156
+  }
+}

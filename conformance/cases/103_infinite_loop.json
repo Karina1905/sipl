@@ -1,0 +1,7 @@
+{
+  "description": "Нескінченний цикл зупиняється лімітом кроків",
+  "max_steps": 50,
+  "expect": {
+    "status": "step_limit"
+  }
+}

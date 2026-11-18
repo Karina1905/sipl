@@ -1,0 +1,489 @@
+{
+  "type": "Program",
+  "id": 0,
+  "body": {
+    "type": "Seq",
+    "id": 1,
+    "statements": [
+      {
+        "type": "If",
+        "id": 2,
+        "cond": {
+          "type": "BoolOp",
+          "id": 3,
+          "op": "or",
+          "left": {
+            "type": "Not",
+            "id": 4,
+            "operand": {
+              "type": "Compare",
+              "id": 5,
+              "op": ">",
+              "left": {
+                "type": "Num",
+                "id": 6,
+                "value": 1,
+                "span": {
+                  "line": 2,
+                  "column": 10,
+                  "end_line": 2,
+                  "end_column": 11,
+                  "start": 15,
+                  "end": 16
+                }
+              },
+              "right": {
+                "type": "Num",
+                "id": 7,
+                "value": 2,
+                "span": {
+                  "line": 2,
+                  "column": 14,
+                  "end_line": 2,
+                  "end_column": 15,
+                  "start": 19,
+                  "end": 20
+                }
+              },
+              "span": {
+                "line": 2,
+                "column": 10,
+                "end_line": 2,
+                "end_column": 15,
+                "start": 15,
+                "end": 20
+              }
+            },
+            "span": {
+              "line": 2,
+              "column": 6,
+              "end_line": 2,
+              "end_column": 15,
+              "start": 11,
+              "end": 20
+            }
+          },
+          "right": {
+            "type": "Compare",
+            "id": 8,
+            "op": "=",
+            "left": {
+              "type": "Num",
+              "id": 9,
+              "value": 3,
+              "span": {
+                "line": 2,
+                "column": 19,
+                "end_line": 2,
+                "end_column": 20,
+                "start": 24,
+                "end": 25
+              }
+            },
+            "right": {
+              "type": "Num",
+              "id": 10,
+              "value": 4,
+              "span": {
+                "line": 2,
+                "column": 23,
+                "end_line": 2,
+                "end_column": 24,
+                "start": 28,
+                "end": 29
+              }
+            },
+            "span": {
+              "line": 2,
+              "column": 19,
+              "end_line": 2,
+              "end_column": 24,
+              "start": 24,
+              "end": 29
+            }
+          },
+          "span": {
+            "line": 2,
+            "column": 6,
+            "end_line": 2,
+            "end_column": 24,
+            "start": 11,
+            "end": 29
+          }
+        },
+        "then_branch": {
+          "type": "Assign",
+          "id": 11,
+          "target": "X",
+          "expr": {
+            "type": "Num",
+            "id": 12,
+            "value": 1,
+            "span": {
+              "line": 2,
+              "column": 35,
+              "end_line": 2,
+              "end_column": 36,
+              "start": 40,
+              "end": 41
+            }
+          },
+          "span": {
+            "line": 2,
+            "column": 30,
+            "end_line": 2,
+            "end_column": 36,
+            "start": 35,
+            "end": 41
+          }
+        },
+        "else_branch": {
+          "type": "Assign",
+          "id": 13,
+          "target": "X",
+          "expr": {
+            "type": "Num",
+            "id": 14,
+            "value": 0,
+            "span": {
+              "line": 2,
+              "column": 47,
+              "end_line": 2,
+              "end_column": 48,
+              "start": 52,
+              "end": 53
+            }
+          },
+          "span": {
+            "line": 2,
+            "column": 42,
+            "end_line": 2,
+            "end_column": 48,
+            "start": 47,
+            "end": 53
+          }
+        },
+        "span": {
+          "line": 2,
+          "column": 3,
+          "end_line": 2,
+          "end_column": 48,
+          "start": 8,
+          "end": 53
+        }
+      },
+      {
+        "type": "If",
+        "id": 15,
+        "cond": {
+          "type": "Not",
+          "id": 16,
+          "operand": {
+            "type": "BoolOp",
+            "id": 17,
+            "op": "or",
+            "left": {
+              "type": "Compare",
+              "id": 18,
+              "op": ">",
+              "left": {
+                "type": "Num",
+                "id": 19,
+                "value": 1,
+                "span": {
+                  "line": 3,
+                  "column": 11,
+                  "end_line": 3,
+                  "end_column": 12,
+                  "start": 65,
+                  "end": 66
+                }
+              },
+              "right": {
+                "type": "Num",
+                "id": 20,
+                "value": 2,
+                "span": {
+                  "line": 3,
+                  "column": 15,
+                  "end_line": 3,
+                  "end_column": 16,
+                  "start": 69,
+                  "end": 70
+                }
+              },
+              "span": {
+                "line": 3,
+                "column": 11,
+                "end_line": 3,
+                "end_column": 16,
+                "start": 65,
+                "end": 70
+              }
+            },
+            "right": {
+              "type": "Compare",
+              "id": 21,
+              "op": "=",
+              "left": {
+                "type": "Num",
+                "id": 22,
+                "value": 1,
+                "span": {
+                  "line": 3,
+                  "column": 20,
+                  "end_line": 3,
+                  "end_column": 21,
+                  "start": 74,
+                  "end": 75
+                }
+              },
+              "right": {
+                "type": "Num",
+                "id": 23,
+                "value": 1,
+                "span": {
+                  "line": 3,
+                  "column": 24,
+                  "end_line": 3,
+                  "end_column": 25,
+                  "start": 78,
+                  "end": 79
+                }
+              },
+              "span": {
+                "line": 3,
+                "column": 20,
+                "end_line": 3,
+                "end_column": 25,
+                "start": 74,
+                "end": 79
+              }
+            },
+            "span": {
+              "line": 3,
+              "column": 10,
+              "end_line": 3,
+              "end_column": 26,
+              "start": 64,
+              "end": 80
+            }
+          },
+          "span": {
+            "line": 3,
+            "column": 6,
+            "end_line": 3,
+            "end_column": 26,
+            "start": 60,
+            "end": 80
+          }
+        },
+        "then_branch": {
+          "type": "Assign",
+          "id": 24,
+          "target": "Y",
+          "expr": {
+            "type": "Num",
+            "id": 25,
+            "value": 1,
+            "span": {
+              "line": 3,
+              "column": 37,
+              "end_line": 3,
+              "end_column": 38,
+              "start": 91,
+              "end": 92
+            }
+          },
+          "span": {
+            "line": 3,
+            "column": 32,
+            "end_line": 3,
+            "end_column": 38,
+            "start": 86,
+            "end": 92
+          }
+        },
+        "else_branch": {
+          "type": "Assign",
+          "id": 26,
+          "target": "Y",
+          "expr": {
+            "type": "Num",
+            "id": 27,
+            "value": 0,
+            "span": {
+              "line": 3,
+              "column": 49,
+              "end_line": 3,
+              "end_column": 50,
+              "start": 103,
+              "end": 104
+            }
+          },
+          "span": {
+            "line": 3,
+            "column": 44,
+            "end_line": 3,
+            "end_column": 50,
+            "start": 98,
+            "end": 104
+          }
+        },
+        "span": {
+          "line": 3,
+          "column": 3,
+          "end_line": 3,
+          "end_column": 50,
+          "start": 57,
+          "end": 104
+        }
+      },
+      {
+        "type": "If",
+        "id": 28,
+        "cond": {
+          "type": "Compare",
+          "id": 29,
+          "op": ">",
+          "left": {
+            "type": "BinOp",
+            "id": 30,
+            "op": "+",
+            "left": {
+              "type": "Num",
+              "id": 31,
+              "value": 1,
+              "span": {
+                "line": 4,
+                "column": 7,
+                "end_line": 4,
+                "end_column": 8,
+                "start": 112,
+                "end": 113
+              }
+            },
+            "right": {
+              "type": "Num",
+              "id": 32,
+              "value": 1,
+              "span": {
+                "line": 4,
+                "column": 11,
+                "end_line": 4,
+                "end_column": 12,
+                "start": 116,
+                "end": 117
+              }
+            },
+            "span": {
+              "line": 4,
+              "column": 6,
+              "end_line": 4,
+              "end_column": 13,
+              "start": 111,
+              "end": 118
+            }
+          },
+          "right": {
+            "type": "Num",
+            "id": 33,
+            "value": 1,
+            "span": {
+              "line": 4,
+              "column": 16,
+              "end_line": 4,
+              "end_column": 17,
+              "start": 121,
+              "end": 122
+            }
+          },
+          "span": {
+            "line": 4,
+            "column": 6,
+            "end_line": 4,
+            "end_column": 17,
+            "start": 111,
+            "end": 122
+          }
+        },
+        "then_branch": {
+          "type": "Assign",
+          "id": 34,
+          "target": "Z",
+          "expr": {
+            "type": "Num",
+            "id": 35,
+            "value": 1,
+            "span": {
+              "line": 4,
+              "column": 28,
+              "end_line": 4,
+              "end_column": 29,
+              "start": 133,
+              "end": 134
+            }
+          },
+          "span": {
+            "line": 4,
+            "column": 23,
+            "end_line": 4,
+            "end_column": 29,
+            "start": 128,
+            "end": 134
+          }
+        },
+        "else_branch": {
+          "type": "Assign",
+          "id": 36,
+          "target": "Z",
+          "expr": {
+            "type": "Num",
+            "id": 37,
+            "value": 0,
+            "span": {
+              "line": 4,
+              "column": 40,
+              "end_line": 4,
+              "end_column": 41,
+              "start": 145,
+              "end": 146
+            }
+          },
+          "span": {
+            "line": 4,
+            "column": 35,
+            "end_line": 4,
+            "end_column": 41,
+            "start": 140,
+            "end": 146
+          }
+        },
+        "span": {
+          "line": 4,
+          "column": 3,
+          "end_line": 4,
+          "end_column": 41,
+          "start": 108,
+          "end": 146
+        }
+      }
+    ],
+    "span": {
+      "line": 2,
+      "column": 3,
+      "end_line": 4,
+      "end_column": 41,
+      "start": 8,
+      "end": 146
+    }
+  },
+  "span": {
+    "line": 1,
+    "column": 1,
+    "end_line": 5,
+    "end_column": 4,
+    "start": 0,
+    "end": 150
+  }
+}

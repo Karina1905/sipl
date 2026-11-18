@@ -1,0 +1,11 @@
+// Ділення з остачею відніманням (у SIPL немає ділення): X = Q * Y + R, 0 <= R < Y.
+// Вхід: X >= 0, Y > 0
+begin
+  Q := 0;
+  R := X;
+  while R > Y or R = Y do
+  begin
+    R := R - Y;
+    Q := Q + 1
+  end
+end

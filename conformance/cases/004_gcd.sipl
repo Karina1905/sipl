@@ -1,0 +1,5 @@
+// НСД(A, B) алгоритмом Евкліда відніманням. Вхід: A > 0, B > 0; результат у A
+begin
+  while not (A = B) do
+    if A > B then A := A - B else B := B - A
+end

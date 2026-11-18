@@ -1,0 +1,338 @@
+{
+  "type": "Program",
+  "id": 0,
+  "body": {
+    "type": "Seq",
+    "id": 1,
+    "statements": [
+      {
+        "type": "Assign",
+        "id": 2,
+        "target": "A",
+        "expr": {
+          "type": "BinOp",
+          "id": 3,
+          "op": "+",
+          "left": {
+            "type": "Num",
+            "id": 4,
+            "value": 2,
+            "span": {
+              "line": 2,
+              "column": 8,
+              "end_line": 2,
+              "end_column": 9,
+              "start": 13,
+              "end": 14
+            }
+          },
+          "right": {
+            "type": "BinOp",
+            "id": 5,
+            "op": "*",
+            "left": {
+              "type": "Num",
+              "id": 6,
+              "value": 3,
+              "span": {
+                "line": 2,
+                "column": 12,
+                "end_line": 2,
+                "end_column": 13,
+                "start": 17,
+                "end": 18
+              }
+            },
+            "right": {
+              "type": "Num",
+              "id": 7,
+              "value": 4,
+              "span": {
+                "line": 2,
+                "column": 16,
+                "end_line": 2,
+                "end_column": 17,
+                "start": 21,
+                "end": 22
+              }
+            },
+            "span": {
+              "line": 2,
+              "column": 12,
+              "end_line": 2,
+              "end_column": 17,
+              "start": 17,
+              "end": 22
+            }
+          },
+          "span": {
+            "line": 2,
+            "column": 8,
+            "end_line": 2,
+            "end_column": 17,
+            "start": 13,
+            "end": 22
+          }
+        },
+        "span": {
+          "line": 2,
+          "column": 3,
+          "end_line": 2,
+          "end_column": 17,
+          "start": 8,
+          "end": 22
+        }
+      },
+      {
+        "type": "Assign",
+        "id": 8,
+        "target": "B",
+        "expr": {
+          "type": "BinOp",
+          "id": 9,
+          "op": "*",
+          "left": {
+            "type": "BinOp",
+            "id": 10,
+            "op": "+",
+            "left": {
+              "type": "Num",
+              "id": 11,
+              "value": 2,
+              "span": {
+                "line": 3,
+                "column": 9,
+                "end_line": 3,
+                "end_column": 10,
+                "start": 32,
+                "end": 33
+              }
+            },
+            "right": {
+              "type": "Num",
+              "id": 12,
+              "value": 3,
+              "span": {
+                "line": 3,
+                "column": 13,
+                "end_line": 3,
+                "end_column": 14,
+                "start": 36,
+                "end": 37
+              }
+            },
+            "span": {
+              "line": 3,
+              "column": 8,
+              "end_line": 3,
+              "end_column": 15,
+              "start": 31,
+              "end": 38
+            }
+          },
+          "right": {
+            "type": "Num",
+            "id": 13,
+            "value": 4,
+            "span": {
+              "line": 3,
+              "column": 18,
+              "end_line": 3,
+              "end_column": 19,
+              "start": 41,
+              "end": 42
+            }
+          },
+          "span": {
+            "line": 3,
+            "column": 8,
+            "end_line": 3,
+            "end_column": 19,
+            "start": 31,
+            "end": 42
+          }
+        },
+        "span": {
+          "line": 3,
+          "column": 3,
+          "end_line": 3,
+          "end_column": 19,
+          "start": 26,
+          "end": 42
+        }
+      },
+      {
+        "type": "Assign",
+        "id": 14,
+        "target": "C",
+        "expr": {
+          "type": "BinOp",
+          "id": 15,
+          "op": "-",
+          "left": {
+            "type": "BinOp",
+            "id": 16,
+            "op": "-",
+            "left": {
+              "type": "Num",
+              "id": 17,
+              "value": 10,
+              "span": {
+                "line": 4,
+                "column": 8,
+                "end_line": 4,
+                "end_column": 10,
+                "start": 51,
+                "end": 53
+              }
+            },
+            "right": {
+              "type": "Num",
+              "id": 18,
+              "value": 4,
+              "span": {
+                "line": 4,
+                "column": 13,
+                "end_line": 4,
+                "end_column": 14,
+                "start": 56,
+                "end": 57
+              }
+            },
+            "span": {
+              "line": 4,
+              "column": 8,
+              "end_line": 4,
+              "end_column": 14,
+              "start": 51,
+              "end": 57
+            }
+          },
+          "right": {
+            "type": "Num",
+            "id": 19,
+            "value": 3,
+            "span": {
+              "line": 4,
+              "column": 17,
+              "end_line": 4,
+              "end_column": 18,
+              "start": 60,
+              "end": 61
+            }
+          },
+          "span": {
+            "line": 4,
+            "column": 8,
+            "end_line": 4,
+            "end_column": 18,
+            "start": 51,
+            "end": 61
+          }
+        },
+        "span": {
+          "line": 4,
+          "column": 3,
+          "end_line": 4,
+          "end_column": 18,
+          "start": 46,
+          "end": 61
+        }
+      },
+      {
+        "type": "Assign",
+        "id": 20,
+        "target": "D",
+        "expr": {
+          "type": "BinOp",
+          "id": 21,
+          "op": "-",
+          "left": {
+            "type": "BinOp",
+            "id": 22,
+            "op": "*",
+            "left": {
+              "type": "Num",
+              "id": 23,
+              "value": 2,
+              "span": {
+                "line": 5,
+                "column": 8,
+                "end_line": 5,
+                "end_column": 9,
+                "start": 70,
+                "end": 71
+              }
+            },
+            "right": {
+              "type": "Num",
+              "id": 24,
+              "value": -3,
+              "span": {
+                "line": 5,
+                "column": 12,
+                "end_line": 5,
+                "end_column": 14,
+                "start": 74,
+                "end": 76
+              }
+            },
+            "span": {
+              "line": 5,
+              "column": 8,
+              "end_line": 5,
+              "end_column": 14,
+              "start": 70,
+              "end": 76
+            }
+          },
+          "right": {
+            "type": "Num",
+            "id": 25,
+            "value": -1,
+            "span": {
+              "line": 5,
+              "column": 17,
+              "end_line": 5,
+              "end_column": 19,
+              "start": 79,
+              "end": 81
+            }
+          },
+          "span": {
+            "line": 5,
+            "column": 8,
+            "end_line": 5,
+            "end_column": 19,
+            "start": 70,
+            "end": 81
+          }
+        },
+        "span": {
+          "line": 5,
+          "column": 3,
+          "end_line": 5,
+          "end_column": 19,
+          "start": 65,
+          "end": 81
+        }
+      }
+    ],
+    "span": {
+      "line": 2,
+      "column": 3,
+      "end_line": 5,
+      "end_column": 19,
+      "start": 8,
+      "end": 81
+    }
+  },
+  "span": {
+    "line": 1,
+    "column": 1,
+    "end_line": 6,
+    "end_column": 4,
+    "start": 0,
+    "end": 85
+  }
+}

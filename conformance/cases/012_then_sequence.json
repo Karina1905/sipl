@@ -1,0 +1,12 @@
+{
+  "description": "then-гілка може бути послідовністю (обмежена словом else)",
+  "expect": {
+    "status": "ok",
+    "state": {
+      "X": 1,
+      "Y": 2,
+      "Z": 3
+    },
+    "ast": "012_then_sequence.ast.json"
+  }
+}

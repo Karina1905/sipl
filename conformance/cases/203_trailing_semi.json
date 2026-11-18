@@ -1,0 +1,10 @@
+{
+  "description": "Зайва ';' перед end",
+  "expect": {
+    "status": "syntax_error",
+    "error": {
+      "line": 3,
+      "column": 1
+    }
+  }
+}

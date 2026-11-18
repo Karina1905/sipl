@@ -1,0 +1,5 @@
+begin
+  K := 0; S := 0;
+  while 3 > K do K := K + 1;
+  S := K
+end

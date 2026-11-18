@@ -1,0 +1,10 @@
+{
+  "description": "Вкладені блоки",
+  "expect": {
+    "status": "ok",
+    "state": {
+      "X": 1,
+      "Y": 1
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "description": "Невизначена змінна в умові",
+  "expect": {
+    "status": "runtime_error",
+    "error": {
+      "line": 3,
+      "column": 9,
+      "message_contains": "'N'"
+    },
+    "state": {
+      "X": 1
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "description": "Програма без begin..end (P1)",
+  "expect": {
+    "status": "syntax_error",
+    "error": {
+      "line": 1,
+      "column": 1
+    }
+  }
+}

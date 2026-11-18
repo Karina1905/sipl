@@ -1,0 +1,10 @@
+{
+  "description": "true/false не входять до SIPL",
+  "expect": {
+    "status": "syntax_error",
+    "error": {
+      "line": 2,
+      "column": 14
+    }
+  }
+}

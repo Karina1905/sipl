@@ -1,0 +1,195 @@
+{
+  "type": "Program",
+  "id": 0,
+  "body": {
+    "type": "Seq",
+    "id": 1,
+    "statements": [
+      {
+        "type": "If",
+        "id": 2,
+        "cond": {
+          "type": "Compare",
+          "id": 3,
+          "op": "=",
+          "left": {
+            "type": "Num",
+            "id": 4,
+            "value": 1,
+            "span": {
+              "line": 2,
+              "column": 6,
+              "end_line": 2,
+              "end_column": 7,
+              "start": 11,
+              "end": 12
+            }
+          },
+          "right": {
+            "type": "Num",
+            "id": 5,
+            "value": 1,
+            "span": {
+              "line": 2,
+              "column": 10,
+              "end_line": 2,
+              "end_column": 11,
+              "start": 15,
+              "end": 16
+            }
+          },
+          "span": {
+            "line": 2,
+            "column": 6,
+            "end_line": 2,
+            "end_column": 11,
+            "start": 11,
+            "end": 16
+          }
+        },
+        "then_branch": {
+          "type": "Seq",
+          "id": 6,
+          "statements": [
+            {
+              "type": "Assign",
+              "id": 7,
+              "target": "X",
+              "expr": {
+                "type": "Num",
+                "id": 8,
+                "value": 1,
+                "span": {
+                  "line": 2,
+                  "column": 22,
+                  "end_line": 2,
+                  "end_column": 23,
+                  "start": 27,
+                  "end": 28
+                }
+              },
+              "span": {
+                "line": 2,
+                "column": 17,
+                "end_line": 2,
+                "end_column": 23,
+                "start": 22,
+                "end": 28
+              }
+            },
+            {
+              "type": "Assign",
+              "id": 9,
+              "target": "Y",
+              "expr": {
+                "type": "Num",
+                "id": 10,
+                "value": 2,
+                "span": {
+                  "line": 2,
+                  "column": 30,
+                  "end_line": 2,
+                  "end_column": 31,
+                  "start": 35,
+                  "end": 36
+                }
+              },
+              "span": {
+                "line": 2,
+                "column": 25,
+                "end_line": 2,
+                "end_column": 31,
+                "start": 30,
+                "end": 36
+              }
+            }
+          ],
+          "span": {
+            "line": 2,
+            "column": 17,
+            "end_line": 2,
+            "end_column": 31,
+            "start": 22,
+            "end": 36
+          }
+        },
+        "else_branch": {
+          "type": "Assign",
+          "id": 11,
+          "target": "X",
+          "expr": {
+            "type": "Num",
+            "id": 12,
+            "value": 0,
+            "span": {
+              "line": 2,
+              "column": 42,
+              "end_line": 2,
+              "end_column": 43,
+              "start": 47,
+              "end": 48
+            }
+          },
+          "span": {
+            "line": 2,
+            "column": 37,
+            "end_line": 2,
+            "end_column": 43,
+            "start": 42,
+            "end": 48
+          }
+        },
+        "span": {
+          "line": 2,
+          "column": 3,
+          "end_line": 2,
+          "end_column": 43,
+          "start": 8,
+          "end": 48
+        }
+      },
+      {
+        "type": "Assign",
+        "id": 13,
+        "target": "Z",
+        "expr": {
+          "type": "Num",
+          "id": 14,
+          "value": 3,
+          "span": {
+            "line": 3,
+            "column": 8,
+            "end_line": 3,
+            "end_column": 9,
+            "start": 57,
+            "end": 58
+          }
+        },
+        "span": {
+          "line": 3,
+          "column": 3,
+          "end_line": 3,
+          "end_column": 9,
+          "start": 52,
+          "end": 58
+        }
+      }
+    ],
+    "span": {
+      "line": 2,
+      "column": 3,
+      "end_line": 3,
+      "end_column": 9,
+      "start": 8,
+      "end": 58
+    }
+  },
+  "span": {
+    "line": 1,
+    "column": 1,
+    "end_line": 4,
+    "end_column": 4,
+    "start": 0,
+    "end": 62
+  }
+}

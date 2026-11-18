@@ -1,0 +1,12 @@
+{
+  "description": "¬ сильніше за ∨; дужки в умовах і в арифметиці",
+  "expect": {
+    "status": "ok",
+    "state": {
+      "X": 1,
+      "Y": 0,
+      "Z": 1
+    },
+    "ast": "011_bool_precedence.ast.json"
+  }
+}

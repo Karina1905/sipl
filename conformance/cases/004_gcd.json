@@ -1,0 +1,15 @@
+{
+  "description": "НСД відніманням, ¬ та if усередині while",
+  "input": {
+    "A": 48,
+    "B": 18
+  },
+  "expect": {
+    "status": "ok",
+    "state": {
+      "A": 6,
+      "B": 6
+    },
+    "ast": "004_gcd.ast.json"
+  }
+}

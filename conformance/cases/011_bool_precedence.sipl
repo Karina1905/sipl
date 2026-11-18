@@ -1,0 +1,5 @@
+begin
+  if not 1 > 2 or 3 = 4 then X := 1 else X := 0;
+  if not (1 > 2 or 1 = 1) then Y := 1 else Y := 0;
+  if (1 + 1) > 1 then Z := 1 else Z := 0
+end
