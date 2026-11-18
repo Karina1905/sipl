@@ -1,0 +1,89 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*.*.*"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check that the tag matches the package version
+        run: |
+          VERSION=$(python -c "import tomllib;print(tomllib.load(open('pyproject.toml','rb'))['project']['version'])")
+          test "v$VERSION" = "${GITHUB_REF_NAME}" || { echo "tag ${GITHUB_REF_NAME} != v$VERSION"; exit 1; }
+      - name: Test
+        run: pip install -e ".[dev]" && pytest
+      - name: Build sdist and wheel
+        run: python -m build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+  pypi:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/project/sipl-lang-toolkit/
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+
+  verify-pypi:
+    needs: pypi
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install from PyPI in a clean venv and check the version
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          python -m venv /tmp/clean
+          for i in 1 2 3 4 5 6; do
+            /tmp/clean/bin/pip install --no-cache-dir "sipl-lang-toolkit==$VERSION" && break
+            sleep 20
+          done
+          test "$(/tmp/clean/bin/sipl --version)" = "sipl $VERSION"
+          /tmp/clean/bin/sipl run examples/valid/power.sipl -s X=2 -s Y=10
+
+  github-release:
+    needs: pypi
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - name: Extract release notes from CHANGELOG
+        run: |
+          python - <<'PY'
+          import os, re
+          v = os.environ["GITHUB_REF_NAME"].lstrip("v")
+          text = open("CHANGELOG.md", encoding="utf-8").read()
+          m = re.search(rf"^## \[{re.escape(v)}\].*?$(.*?)(?=^## \[|^\[|\Z)", text, re.S | re.M)
+          notes = m.group(1).strip() if m else v
+          notes += f"\n\n**PyPI:** `pip install sipl-lang-toolkit=={v}`"
+          open("RELEASE_NOTES.md", "w", encoding="utf-8").write(notes)
+          PY
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          body_path: RELEASE_NOTES.md
+          files: dist/*

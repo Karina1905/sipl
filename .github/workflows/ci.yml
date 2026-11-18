@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install Graphviz (for DOT validity test)
+        run: sudo apt-get update && sudo apt-get install -y graphviz
+      - name: Install package
+        run: pip install -e ".[dev]"
+      - name: Lint (ruff)
+        run: ruff check .
+      - name: Type-check (mypy)
+        run: mypy
+      - name: Tests + coverage (>= 80%)
+        run: pytest --cov=sipl --cov-report=term-missing --cov-fail-under=80
+      - name: Conformance suite
+        run: python conformance/run_conformance.py --impl "sipl"
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build sdist and wheel
+        run: pip install build twine && python -m build && twine check --strict dist/*
+      - name: Smoke-test the wheel in a clean venv
+        run: |
+          python -m venv /tmp/clean
+          /tmp/clean/bin/pip install dist/*.whl
+          /tmp/clean/bin/sipl run examples/valid/power.sipl -s X=2 -s Y=10
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
